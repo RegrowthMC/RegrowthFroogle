@@ -1,5 +1,5 @@
-name: ProjectName
+name: RegrowthFroogle
 version: ${project.version}
-main: org.lushplugins.projectname.ProjectName
+main: org.lushplugins.regrowthfroogle.RegrowthFroogle
 api-version: '1.21'
-github-repo: ProjectOwner/ProjectName
+github-repo: RegrowthMC/RegrowthFroogle
