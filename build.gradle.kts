@@ -65,8 +65,9 @@ tasks {
         minecraftVersion("1.21.11")
 
         downloadPlugins {
+            github("RegrowthMC", "RegrowthEntityVariants", "v1.0.1", "RegrowthEntityVariants-1.0.1.jar")
             github("OakLoaf", "ItemPools", "v2.1.1", "ItemPools-2.1.1.jar")
-            modrinth("fancynpcs", "2.9.2")
+            modrinth("fancynpcs", "2.9.2.337")
             modrinth("viaversion", "5.7.1")
             modrinth("viabackwards", "5.7.1")
         }
