@@ -2,4 +2,7 @@ name: RegrowthFroogle
 version: ${project.version}
 main: org.lushplugins.regrowthfroogle.RegrowthFroogle
 api-version: '1.21'
+depend:
+  - ItemPools
+  - FancyNpcs
 github-repo: RegrowthMC/RegrowthFroogle

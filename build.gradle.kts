@@ -12,6 +12,8 @@ repositories {
     mavenCentral()
     maven("https://oss.sonatype.org/content/groups/public/")
     maven("https://repo.papermc.io/repository/maven-public/") // Paper
+    maven("https://repo.lushplugins.org/snapshots/") // LushLib
+    maven("https://repo.fancyinnovations.com/releases") // FancyNPCs
 }
 
 dependencies {
@@ -19,8 +21,11 @@ dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.7-R0.1-SNAPSHOT")
 
     // Soft Dependencies
+    compileOnly("org.lushplugins:ItemPools:2.1.0")
+    compileOnly("de.oliver:FancyNpcs:2.9.2")
 
     // Libraries
+    implementation("org.lushplugins:LushLib:0.10.84")
 }
 
 java {
@@ -60,6 +65,8 @@ tasks {
         minecraftVersion("1.21.11")
 
         downloadPlugins {
+            github("OakLoaf", "ItemPools", "v2.1.1", "ItemPools-2.1.1.jar")
+            modrinth("fancynpcs", "2.9.2")
             modrinth("viaversion", "5.7.1")
             modrinth("viabackwards", "5.7.1")
         }

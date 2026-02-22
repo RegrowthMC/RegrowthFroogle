@@ -1,26 +1,12 @@
 package org.lushplugins.regrowthfroogle;
 
-import org.bukkit.plugin.java.JavaPlugin;
+import org.lushplugins.lushlib.plugin.SpigotPlugin;
+import org.lushplugins.regrowthfroogle.listener.ItemPoolListener;
 
-public final class RegrowthFroogle extends JavaPlugin {
-    private static RegrowthFroogle plugin;
-
-    @Override
-    public void onLoad() {
-        plugin = this;
-    }
+public final class RegrowthFroogle extends SpigotPlugin {
 
     @Override
     public void onEnable() {
-        // Enable implementation
-    }
-
-    @Override
-    public void onDisable() {
-        // Disable implementation
-    }
-
-    public static RegrowthFroogle getInstance() {
-        return plugin;
+        registerListener(new ItemPoolListener());
     }
 }
