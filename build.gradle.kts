@@ -25,7 +25,7 @@ dependencies {
     compileOnly("de.oliver:FancyNpcs:2.9.2")
 
     // Libraries
-    implementation("org.lushplugins:LushLib:0.10.84")
+    implementation("org.lushplugins:LushLib:0.10.86")
 }
 
 java {
