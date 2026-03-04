@@ -26,6 +26,7 @@ dependencies {
 
     // Libraries
     implementation("org.lushplugins:LushLib:0.10.89")
+    implementation("org.lushplugins:PlaceholderHandler:1.0.0-alpha10")
 }
 
 java {
@@ -68,6 +69,7 @@ tasks {
             github("RegrowthMC", "RegrowthEntityVariants", "v1.0.1", "RegrowthEntityVariants-1.0.1.jar")
             github("OakLoaf", "ItemPools", "v2.1.1", "ItemPools-2.1.1.jar")
             modrinth("fancynpcs", "2.9.2.337")
+            modrinth("placeholderapi", "UmbIiI5H")
             modrinth("viaversion", "5.7.1")
             modrinth("viabackwards", "5.7.1")
         }
