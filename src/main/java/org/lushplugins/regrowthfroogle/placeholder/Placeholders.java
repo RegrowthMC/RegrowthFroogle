@@ -23,7 +23,7 @@ public class Placeholders {
         .toFormatter();
 
     private LocalDateTime next = LocalDate.now()
-        .withDayOfMonth(4)
+        .withDayOfMonth(1)
         .atTime(16, 0, 0);
 
     @SubPlaceholder("countdown")
