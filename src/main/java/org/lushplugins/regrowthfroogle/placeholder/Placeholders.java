@@ -24,7 +24,7 @@ public class Placeholders {
 
     private LocalDateTime next = LocalDate.now()
         .withDayOfMonth(4)
-        .atTime(0, 41, 20);
+        .atTime(16, 0, 0);
 
     @SubPlaceholder("countdown")
     public String countdown() {
