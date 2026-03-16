@@ -25,7 +25,7 @@ dependencies {
     compileOnly("de.oliver:FancyNpcs:2.9.2")
 
     // Libraries
-    implementation("org.lushplugins:LushLib:0.10.89")
+    implementation("org.lushplugins:LushLib:1.0.0")
     implementation("org.lushplugins:PlaceholderHandler:1.0.0-alpha10")
 }
 
