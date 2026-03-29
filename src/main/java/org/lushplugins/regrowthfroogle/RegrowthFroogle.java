@@ -1,6 +1,6 @@
 package org.lushplugins.regrowthfroogle;
 
-import org.lushplugins.lushlib.plugin.SpigotPlugin;
+import org.lushplugins.lushlib.utils.plugin.SpigotPlugin;
 import org.lushplugins.placeholderhandler.PlaceholderHandler;
 import org.lushplugins.regrowthfroogle.listener.ItemPoolListener;
 import org.lushplugins.regrowthfroogle.placeholder.Placeholders;
