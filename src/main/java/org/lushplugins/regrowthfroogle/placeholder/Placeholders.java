@@ -3,9 +3,9 @@ package org.lushplugins.regrowthfroogle.placeholder;
 import org.lushplugins.lushlib.utils.TimeFormatter;
 import org.lushplugins.placeholderhandler.annotation.Placeholder;
 import org.lushplugins.placeholderhandler.annotation.SubPlaceholder;
+import org.lushplugins.regrowthfroogle.RegrowthFroogle;
 
 import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
@@ -22,20 +22,15 @@ public class Placeholders {
         .appendValue(ChronoField.YEAR, 4)
         .toFormatter();
 
-    private LocalDateTime next = LocalDate.now()
-        .withDayOfMonth(1)
-        .atTime(16, 0, 0);
-
     @SubPlaceholder("countdown")
     public String countdown() {
+        LocalDateTime next = RegrowthFroogle.getInstance().getNextFeedingTime();
         LocalDateTime now = LocalDateTime.now();
-        if (!now.isBefore(this.next)) {
-            this.next = this.next.plusMonths(1);
-        } else if (now.toLocalDate().isEqual(this.next.toLocalDate())) {
-            Duration duration = Duration.between(now, this.next);
-            return TimeFormatter.formatDuration(Duration.between(now, this.next),  TimeFormatter.FormatType.SHORT_FORM);
+        if (now.toLocalDate().isEqual(next.toLocalDate())) {
+            Duration duration = Duration.between(now, next);
+            return TimeFormatter.formatDuration(Duration.between(now, next),  TimeFormatter.FormatType.SHORT_FORM);
         }
 
-        return this.next.toLocalDate().format(DATE_FORMAT);
+        return next.toLocalDate().format(DATE_FORMAT);
     }
 }
