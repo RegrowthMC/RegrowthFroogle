@@ -22,7 +22,7 @@ dependencies {
 
     // Soft Dependencies
     compileOnly("org.lushplugins:ItemPools:2.1.0")
-    compileOnly("de.oliver:FancyNpcs:2.9.2")
+    compileOnly("de.oliver:FancyNpcs:2.10.0.354")
 
     // Libraries
     implementation("org.lushplugins:LushLib:1.0.0")
